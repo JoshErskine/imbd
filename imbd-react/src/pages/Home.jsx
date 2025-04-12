@@ -26,6 +26,7 @@ function Home() {
       </form>
       <h1>Home</h1>
       <p>Welcome to the IMDB clone!</p>
+
       <div className="movie-grid">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
