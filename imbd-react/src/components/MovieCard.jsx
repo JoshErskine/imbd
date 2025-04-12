@@ -1,3 +1,5 @@
+import "../css/moviecard.css";
+
 function MovieCard({ movie }) {
   function handleClick() {
     alert(`Added ${movie.Title} to favourites`);
@@ -16,7 +18,6 @@ function MovieCard({ movie }) {
       <div className="movie-details">
         <h3>{movie.Title}</h3>
         <p>{movie.Year}</p>
-        <p>{movie.Genre}</p>
       </div>
     </div>
   );
