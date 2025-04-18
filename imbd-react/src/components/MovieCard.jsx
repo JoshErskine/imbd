@@ -1,14 +1,17 @@
-import "../css/moviecard.css";
+import "../css/MovieCard.css";
 
 function MovieCard({ movie }) {
   function handleClick() {
-    alert(`Added ${movie.Title} to favourites`);
+    alert(`Added ${movie.title} to favourites`);
   }
 
   return (
     <div className="movie-card">
       <div className="movie-poster">
-        <img src={movie.Poster} alt={movie.Title} />
+        <img
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          alt={movie.title}
+        />
         <div className="movie-overlay">
           <button className="favourite-btn" onClick={handleClick}>
             ♥
@@ -16,8 +19,8 @@ function MovieCard({ movie }) {
         </div>
       </div>
       <div className="movie-details">
-        <h3>{movie.Title}</h3>
-        <p>{movie.Year}</p>
+        <h3>{movie.title}</h3>
+        <p>{movie.release_date?.split("-")[0]}</p>
       </div>
     </div>
   );
