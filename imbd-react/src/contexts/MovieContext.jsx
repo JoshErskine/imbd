@@ -23,8 +23,8 @@ export const MovieProvider = ({ children }) => {
   };
 
   // Generates new array that contains all movies not equal to the movieId being removed
-  const removeFavourites = (movieId) => {
-    setFavourites((prev) => [prev.filter((movie) => movie.id !== movieId)]);
+  const removeFromFavourites = (movieId) => {
+    setFavourites((prev) => prev.filter((movie) => movie.id !== movieId));
   };
 
   // Checks all movie Id's in favourites, checks if one is equal to current movieId, returns true
@@ -36,7 +36,7 @@ export const MovieProvider = ({ children }) => {
   const value = {
     favourites,
     addToFavourites,
-    removeFavourites,
+    removeFromFavourites,
     isFavourite,
   };
 
